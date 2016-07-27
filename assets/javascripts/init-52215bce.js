@@ -1,0 +1,1 @@
+!function(n){n(document).ready(function(){n(".mobile-menu").mobileMenu(),n(".fa-flask").parent("a").hover(function(){n(this).addClass("fa-spin")},function(){n(this).removeClass("fa-spin")})})}(jQuery);
