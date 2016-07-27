@@ -1,0 +1,37 @@
+// ------------------------------------------------------------
+// Layout
+// ------------------------------------------------------------
+
+// A simple, reusable mixin for applying
+// to the top and bottom of an element.
+@mixin section_padding($padding: 1em) {
+  padding: $padding 0;
+}
+
+.site-header {
+  position: relative;
+  @include clearfix;
+
+  @include media($medium-screen) {
+    border-bottom:none;
+  }
+}
+
+.site-main {
+  @include section_padding(2em);
+}
+
+.site-footer {
+  @include section_padding(1em);
+  border-top: 1px solid #eee;
+}
+
+// ------------------------------------------------------------
+// Typography
+// ------------------------------------------------------------
+
+h1, h2, h3,
+h4, h5, h6 {
+  line-height: 1; // Set line-height smaller on larger fonts
+  color: #006699;
+}
