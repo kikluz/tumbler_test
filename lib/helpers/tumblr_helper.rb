@@ -1,11 +1,11 @@
 module TumblrHelper
 
-  @@URL = 'kikluz.tumblr.com/'
+  @@URL = 'davemelvin.tumblr.com/'
   @@oauth= {
-    :consumer_key => 'tHlvMzGjPMxKXZGcFcqWR5JALAYKVmkQKycevNcDYgzdUY0JUL',
-    :consumer_secret => 'pSKZDbdBqjRcH15cF7iO2fGb8X0tzbVSJG3KY2FIfzDqZeV0ho',
-    :oauth_token => 'hTEi0lHKy8LgWDW6TjOJyRi4iEo9By40biNTPrRbMF9TTninSa',
-    :oauth_token_secret => 'E3FO6oufptOSpUU6CcpamtIS3r137JmGfMmIdoiudJ84X8fomD'
+    :consumer_key => 'okVDv8hiO5R0JakfN3aR8mbZKwoJKBA9M3usu1tj7aEKi2dVm6',
+    :consumer_secret => 'jQUNSQT6mzfyTKnSc8MT5BosZoCowG9oo7BzyhzeJ7b1r3jD4B',
+    :oauth_token =>  'mR312aJDKiSyzNkfi3qcAE8JNT0onIKDv8Ar9QzAdNmqXNf0am',
+    :oauth_token_secret => 'uM2YmI1EbI2dxrpPHhPhtrDdNGsax2TRuoMXtFAChh5YEXlQIl'
   }
 
   # create the client
