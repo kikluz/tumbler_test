@@ -10,7 +10,7 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title>Blog</title>
 
-    <link href="../assets/stylesheets/application-f31b8297.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="../assets/stylesheets/application-cd44c54b.css" media="screen" rel="stylesheet" type="text/css" />
     
   </head>
 
@@ -44,131 +44,15 @@
 <div class="blog-entries">
   
     <div class="blog-post">
-      <h1><a href="selenium-webdriver-high-level-steps-for-creating/"></a></h1>
-    <h1>Selenium WebDriver</h1>
-
-<p>High Level steps for creating your first selenium test</p>
-
-<ul><li>Starter project - <a href="https://github.com/dnajd/ruby_tester">https://github.com/dnajd/ruby_tester</a></li>
-<li>Assertions - <a href="http://www.mattsears.com/articles/2011/12/10/minitest-quick-reference">http://www.mattsears.com/articles/2011/12/10/minitest-quick-reference</a></li>
-<li>WebDriver Docs - <a href="http://www.seleniumhq.org/docs/03_webdriver.jsp">http://www.seleniumhq.org/docs/03_webdriver.jsp</a></li>
-</ul><h1>Create First Test</h1>
-
-<h2>Create folder for tests</h2>
-
-<p><code>/test/nameproject</code></p>
-
-<h2>Create a test inside the folder</h2>
-
-<p><code>/test/nameproject/login_test.rb</code></p>
-
-<h3>Copy selenium example into the test</h3>
-
-<p><code>/test/examples/selenium_test.rb</code></p>
-
-<h3>Modify selenium example code in</h3>
-
-<p><code>/test/nameproject/login_test.rb</code></p>
-
-<h2>ex code&hellip;</h2>
-
-<p><code>@driver.navigate.to "http://my.site.com"
-@driver.find_element(:id, “username").send_keys “kikluz”</code></p>
-
-<h1>Modify Rakefile to run the test</h1>
-
-<h2>Run the test  add it on Rekefile</h2>
-
-<p><code>ex.  t.pattern = 'test/**/*login_test.rb'</code></p>
-
-<h2>Run the test in the terminal</h2>
-
-<p><code>be rake test</code></p>
-
-<h1>Extract find_element code to Page Object</h1>
-
-<h2>Create a folder for page objects</h2>
-
-<p><code>/tests/bayphoto/page_objects/login_page.rb</code></p>
-
-<p>class LoginPage
-  def initialize(driver)
-        @driver = driver
-    end</p>
-
-<pre><code>def get_customer_number
-    return @driver.find_element(:name, 'new_session[customerid]')
-end
-</code></pre>
-
-<p>end</p>
-
-<h2>Use the page object in /test/bayphoto/login_test.rb</h2>
-
-<h1>replace this…</h1>
-
-<p><code>@driver.navigate.to "http://my.bayphoto.com"
-@driver.find_element(:id, “username’’).send_keys “kikluz”</code></p>
-
-<h1>with something like this…</h1>
-
-<p><code>@driver.navigate.to "http://my.bayphoto.com"
-login_page = LoginPage.new(@driver)
-login_page.get_customer_number.send_keys "kikluz"</code></p>
+      <h1><a href="blog/">Blog</a></h1>
+    <p>test as a blog</p>
       
   </div>
   
     <div class="blog-post">
-      <h1><a href="linux-bash-shell-cheat-sheet/">Linux Bash Shell Cheat Sheet</a></h1>
-    <p> <br/><b>Basic Commands</b><br/>Basic Terminal Shortcuts Basic file manipulation<br/>CTRL L = Clear the terminal<br/>CTRL D = Logout<br/>SHIFT Page Up/Down = Go up/down the terminal<br/>CTRL A = Cursor to start of line<br/>CTRL E = Cursor the end of line<br/>CTRL U = Delete left of the cursor<br/>CTRL K = Delete right of the cursor<br/>CTRL W = Delete word on the left<br/>CTRL Y = Paste (after CTRL U,K or W)<br/>TAB = auto completion of file or command<br/>CTRL R = reverse search history</p><p><b>basic Terminal Navigation</b></p><p>ls -a = list all files and folders<br/>ls &lt;folderName&gt; = list files in folder<br/>ls -lh = Detailed list, Human readable<br/>ls -l *.jpg = list jpeg files only<br/>ls -lh &lt;fileName&gt; = Result for file only</p><p>cd &lt;folderName&gt; = change directory<br/>if folder name has spaces use “ “<br/>cd / = go to root<br/>cd .. = go up one folder, tip: ../../../</p>
-      
-  </div>
-  
-    <div class="blog-post">
-      <h1><a href="easy-guide-to-tmux/">Easy Guide to tmux</a></h1>
-    <p>I just found this article about tmux and I  know in some point I’m going to use it. So I will write  code to remember!.</p><h2>What’s tmux?</h2><p>tmux’s authors describe it as a terminal multiplexer. Behind this fancy term hides a simple concept: Within one terminal window you can open multiple windows and split-views (called “panes” in tmux lingo). Each pane will contain its own, independently running terminal instance. This allows you to have multiple terminal commands and applications running visually next to each other without the need to open multiple terminal emulator windows.</p><p><b>Splitting Panes</b><br/></p><p>All commands in tmux are triggered by a prefix key followed by acommand key (quite similar to emacs). By default, tmux uses <code>C-b</code> as prefix key. This notation might read a little weird if you’re not used to it. In this emacs notation <code>C-</code> means “press and hold the <code>Ctrl</code> key”<sup><a href="http://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/#fn:3">3</a></sup>. Thus<code>C-b</code> simply means press the <code>Ctrl</code> and <code>b</code> keys at the same time.<br/></p><p><b>Navigating Panes</b></p><p>Right now we’re trapped in the newly created pane. But we really really want to go back to the left one. Easy peasy: Switching to a different pane uses the <code>C-b &lt;arrow key&gt;</code> shortcut, where &lt;arrow key&gt; is the arrow key pointing to the pane you want to switch to. In our case we want to switch to the panel on the left so it’s <code>C-b left</code> for us. Just once more, so that we fully understand this: This means you press <code>Ctrl</code> and<code>b</code> (your prefix) followed by the <code>left</code> arrow key to get to the pane on the left.</p><p><b>Closing Panes</b></p><p>Closing a pane is as simple as closing a regular terminal session. Either type <code>exit</code> or hit <code>Ctrl-d</code> and it’s gone.</p><p><b>Creating Windows</b></p><p>Windows in tmux can be compared to creating new virtual desktops; if you’ve ever worked with one of the major Linux deskop environments (KDE, Gnome) you’ll hopefully find this analogy helpful.</p><p>Creating new windows is as easy as typing <code>C-b c</code> (one last time: that’s<code>Ctrl</code> and <code>b</code> at once, then <code>c</code>). The new window will then be presented to you in tmux’s status bar.</p><p><a href="http://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/">link </a>to real article </p>
-      
-  </div>
-  
-    <div class="blog-post">
-      <h1><a href="playing-with-brushes-on-photoshop-and-painter/">Playing with brushes on Photoshop and painter</a></h1>
-    <p>Playing with brushes on Photoshop and painter</p>
-      <img class="blog-image" src="https://65.media.tumblr.com/1ac9c46870ff42b74fcb4c08251c9f9f/tumblr_nti86jOwLG1ub9t45o1_1280.jpg" />
-  </div>
-  
-    <div class="blog-post">
-      <h1><a href="git/">GIT</a></h1>
-    <h2>Basic Git commands that I use all the time:</h2><p><b>git init </b>creates  a new local repository</p><p><b>git clone</b> creates a copy working of a local repository</p><p><b>git commit -m”</b> bla bla bla” Commits changes ti head (but not yet to the remote repository )</p><p><b>git commit -a</b> Commits any files you’ve added with git add, and also commits files you’ve changed since then</p><p><b>git push </b>Send changes to the master branch of your remote repository </p><p><b>git status</b> List the files you’ve  changed and those you still need add or commit  </p>
-      
-  </div>
-  
-    <div class="blog-post">
-      <h1><a href="neat-bourbon/">Neat Bourbon</a></h1>
-    <p><b>How to make grids with neat:</b></p><p>&lt;div class=“blog-entries”&gt;<br/>  &lt;% by_tag_formatted(‘blog’).each do |item| %&gt;
-<br/>  &lt;div class=“blog-post”&gt;
-  <br/>   &lt;h1&gt;<br/>    &lt;%= link_to item[:title],item[:url] %&gt;<br/>  &lt;/h1&gt;<br/>   &lt;%= item[:body] %&gt; <br/>   &lt;%= image_tag item[:image_url], class: &lsquo;blog-image’ unless          item[:image_url].nil? %&gt;<br/>   &lt;/div&gt;<br/>  &lt;% end %&gt;<br/> &lt;/div&gt;</p><p>blog-entries {
-<br/> @include outer-container; <br/>  .blog-post { <br/>   @include span-columns(4);  <br/>     padding:1em 2em;<br/>   }  <br/> .blog-post:first-child {
-  <br/>  @include span-columns(12);  <br/>     border-bottom:1px solid black;
-  <br/>     background-color: #eee; <br/>  }<br/>}</p>
-      
-  </div>
-  
-    <div class="blog-post">
-      <h1><a href="cheat-sheet/">Cheat Sheet</a></h1>
-    <p>Some of the code that I use  all the time.</p><p>Middleman Helpers:</p><p><b>link_to</b><br/></p><p>&lt;%= link_to &lsquo;My Site&rsquo;, 'http://mysite.com&rsquo; %&gt;<br/></p><p><b>Target blank</b></p><p>&lt;%= link_to 'mm-docs&rsquo;, &rsquo;/docs&rsquo;, target: 'blank&rsquo; %&gt;</p><p><b>For example, if you want to insert 5 sentences of lorem ipsum, you would write</b><br/></p><p>&lt;%= lorem.sentences 5 %&gt;<br/></p>
-      
-  </div>
-  
-    <div class="blog-post">
-      <h1><a href="learn-programming-resources-links/">learn programming resources/ links</a></h1>
-    <p>I have been learning web development almost two years ago. Here is some of my resource.</p><ul><li><a href="https://middlemanapp.com/">Build static websites</a><br/></li><li><a href="http://sass-lang.com/">CSS with superpowers</a><br/></li><li><a href="http://bourbon.io/">A simple and lightweight mixin library for Sass.</a><br/></li><li><a href="https://www.codecademy.com">Code Cademy</a><br/></li></ul>
-      
-  </div>
-  
-    <div class="blog-post">
-      <h1><a href="the-human-skull-is-the-bony-structure-that-forms/">The human skull is the bony structure that forms the...</a></h1>
-    <p>The <b>human skull</b> is the <a href="https://en.wikipedia.org/wiki/Bone" title="Bone">bony</a> structure that forms the <a href="https://en.wikipedia.org/wiki/Human_head" title="Human head">head</a> in the <a href="https://en.wikipedia.org/wiki/Human_skeleton" title="Human skeleton">human skeleton</a>. It supports the structures of the <a href="https://en.wikipedia.org/wiki/Human_face" title="Human face">face</a> and forms a cavity for the <a href="https://en.wikipedia.org/wiki/Human_brain" title="Human brain">brain</a>. Like the <a href="https://en.wikipedia.org/wiki/Skull" title="Skull">skulls</a> of other vertebrates, it protects the brain from injury.</p><p>The skull consists of two parts, of different <a href="https://en.wikipedia.org/wiki/Embryology" title="Embryology">embryological</a> origin—the <a href="https://en.wikipedia.org/wiki/Neurocranium" title="Neurocranium">neurocranium</a> and the <a href="https://en.wikipedia.org/wiki/Facial_skeleton" title="Facial skeleton">facial skeleton</a> (also called the <i>viscerocranium</i>). The neurocranium (or <i>braincase</i>) forms the protective <a href="https://en.wikipedia.org/wiki/Cranial_vault" title="Cranial vault">cranial vault</a> that surrounds and houses the brain and <a href="https://en.wikipedia.org/wiki/Brainstem" title="Brainstem">brainstem</a>. The facial skeleton is formed by the bones supporting the face.</p>
-      <img class="blog-image" src="https://66.media.tumblr.com/5638f6e097fc6733bd2483290f4caaa7/tumblr_ns2ebjwEAg1ub9t45o1_1280.jpg" />
+      <h1><a href="testing-image-for-web/">testing image for web</a></h1>
+    <p>testing image for web</p>
+      <img class="blog-image" src="https://66.media.tumblr.com/2f4d64903bff5d997be575626c25de07/tumblr_ob3ga87o6j1upx5s5o1_1280.jpg" />
   </div>
   
 </div>
