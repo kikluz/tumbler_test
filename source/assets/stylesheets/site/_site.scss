@@ -35,3 +35,46 @@ h4, h5, h6 {
   line-height: 1; // Set line-height smaller on larger fonts
   color: #006699;
 }
+
+// ------------------------------------------------------------
+// Intro content
+// ------------------------------------------------------------
+.blog-container {
+
+}
+.blog-intro {
+  font-size: 1.2em;
+  font-weight: 400;
+  margin: 0 auto 1em;
+  max-width: 90%;
+  text-align: center;
+}
+.blog-image {
+  width: 300px;
+}
+
+.on-sale {
+  @include media($large-screen) {
+    float: right;
+  }
+}
+
+
+.blog-entries{
+  @include outer-container;
+  a { font-size: 0.8em;}
+    .blog-post {
+      padding:0.5em 1em;
+      @include media($large-screen) {
+      @include span-columns(5);
+      padding:1em 2em;
+    }
+  }
+
+  .blog-post:first-child {
+     @include span-columns(12);
+     border-bottom:1px solid #E6ECFF;
+     background-color: #F6F7F7;
+  }
+
+}
