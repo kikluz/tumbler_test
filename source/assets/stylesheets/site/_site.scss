@@ -64,6 +64,8 @@ h4, h5, h6 {
   @include outer-container;
   a { font-size: 0.8em;}
     .blog-post {
+      a {color: #ff9933;}
+      a:hover {color: #fedf5c;}
       padding:0.5em 1em;
       @include media($large-screen) {
       @include span-columns(5);

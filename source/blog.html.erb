@@ -24,7 +24,7 @@ title: Blog
 <div class="blog-entries">
   <% by_tag_formatted('blog').each do |item| %>
     <div class="blog-post">
-      <h1><%= link_to item[:title],item[:relative_url] %></h1>
+      <h1><%= link_to item[:title],item[:relative_url]  %></h1>
     <%= item[:body] %>
       <%= image_tag item[:image_url], class: 'blog-image' unless item[:image_url].nil? %>
   </div>
